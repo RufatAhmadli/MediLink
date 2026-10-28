@@ -1,111 +1,176 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import "tailwindcss";
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-navy: #13233a;
+  --color-navy-700: #2a3b55;
+  --color-navy-500: #475670;
+  --color-navy-300: #74829a;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  --color-teal: #0b7a6f;
+  --color-teal-dark: #08665c;
+  --color-teal-soft: #e5f3f0;
+  --color-teal-glow: #4fd1be;
+
+  --color-canvas: #f7f6f2;
+  --color-line: #e4e6ea;
+  --color-line-strong: #d3d7de;
+
+  --color-high: #b42318;
+  --color-high-soft: #fdecea;
+  --color-low: #a15c07;
+  --color-low-soft: #fff4e0;
+
+  --shadow-card: 0 1px 2px rgb(19 35 58 / 0.04), 0 6px 20px -8px rgb(19 35 58 / 0.1);
+  --shadow-lift: 0 2px 6px rgb(19 35 58 / 0.06), 0 22px 40px -14px rgb(19 35 58 / 0.22);
+  --shadow-glow: 0 10px 30px -10px rgb(11 122 111 / 0.55);
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  --animate-fade-in: fade-in 0.4s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-blob: blob 16s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.2s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  --animate-draw: draw 2.2s ease-out both;
+  --animate-shimmer: shimmer 3s linear infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(40px, -30px) scale(1.1); }
+    66% { transform: translate(-30px, 25px) scale(0.92); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.7; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes draw {
+    from { stroke-dashoffset: 400; }
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes shimmer {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+/* Children of .stagger fade up one after another. */
+.stagger > * {
+  animation: var(--animate-fade-up);
+}
+.stagger > *:nth-child(2) { animation-delay: 60ms; }
+.stagger > *:nth-child(3) { animation-delay: 120ms; }
+.stagger > *:nth-child(4) { animation-delay: 180ms; }
+.stagger > *:nth-child(5) { animation-delay: 240ms; }
+.stagger > *:nth-child(6) { animation-delay: 300ms; }
+.stagger > *:nth-child(7) { animation-delay: 360ms; }
+.stagger > *:nth-child(n + 8) { animation-delay: 420ms; }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+/* Soft dotted texture for dark brand panels. */
+.dot-grid {
+  background-image: radial-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #4fd1be, #ffffff, #4fd1be);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #0b7a6f 10%, #2f9e8f 45%, #2f5dd1 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* A dashed connector whose dashes travel left to right (or top to bottom). */
+.flow-line {
+  background-image: linear-gradient(90deg, #0b7a6f 50%, transparent 0);
+  background-size: 12px 2px;
+  background-repeat: repeat-x;
+  animation: flow-x 0.9s linear infinite;
+}
+.flow-line-v {
+  background-image: linear-gradient(180deg, #0b7a6f 50%, transparent 0);
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  animation: flow-y 0.9s linear infinite;
+}
+@keyframes flow-x {
+  to { background-position: 12px 0; }
+}
+@keyframes flow-y {
+  to { background-position: 0 12px; }
+}
+
+/* A dot that travels along a connector. */
+.flow-dot {
+  animation: travel 2.4s ease-in-out infinite;
+}
+@keyframes travel {
+  0% { left: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { left: calc(100% - 0.5rem); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
+html,
+body,
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  min-height: 100%;
+}
+
+/* Larger base size: every rem-based font and spacing scales with it. */
+html {
+  font-size: 17.5px;
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
+  @apply bg-canvas text-navy font-sans antialiased;
+  background-image:
+    radial-gradient(60rem 30rem at 100% -10%, rgb(79 209 190 / 0.12), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 110%, rgb(11 122 111 / 0.06), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Hide number input spinners in result entry */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
 }
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+input[type="number"] {
+  -moz-appearance: textfield;
 }
