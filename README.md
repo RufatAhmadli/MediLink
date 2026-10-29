@@ -1,8 +1,8 @@
-# MediLink — frontend prototype
+# HealthTrail — frontend prototype
 
 **Your medical history, wherever you go.**
 
-MediLink connects private clinics and labs in Azerbaijan. Patients book doctor visits and lab tests, and their verified results and doctor summaries follow them from one provider to the next — shared only with the patient's permission.
+HealthTrail connects private clinics and labs in Azerbaijan. Patients book doctor visits and lab tests, and their verified results and doctor summaries follow them from one provider to the next — shared only with the patient's permission.
 
 This repository is a clickable **frontend prototype** for a university pitch. There is no backend: all data comes from a local mock layer and login is simulated.
 
@@ -27,11 +27,11 @@ The login page lists one-click demo shortcuts. Any email and password also work 
 
 | Role | Name | Email |
 | --- | --- | --- |
-| Patient | Elshad Mammadov, 58 — type 2 diabetes, hypertension | `elshad@medilink.demo` |
-| Patient | Aysel Karimova, 29 — pregnancy | `aysel@medilink.demo` |
-| Doctor | Dr. Leyla Hasanova — cardiologist, Baku Cardio Clinic | `leyla.hasanova@medilink.demo` |
-| Doctor | Dr. Rauf Aliyev — endocrinologist, Ailə Medical Center | `rauf.aliyev@medilink.demo` |
-| Doctor | Dr. Nigar Huseynova — gynecologist, Sahil Women's Clinic | `nigar.huseynova@medilink.demo` |
+| Patient | Elshad Mammadov, 58 — type 2 diabetes, hypertension | `elshad@healthtrail.demo` |
+| Patient | Aysel Karimova, 29 — pregnancy | `aysel@healthtrail.demo` |
+| Doctor | Dr. Leyla Hasanova — cardiologist, Baku Cardio Clinic | `leyla.hasanova@healthtrail.demo` |
+| Doctor | Dr. Rauf Aliyev — endocrinologist, Ailə Medical Center | `rauf.aliyev@healthtrail.demo` |
+| Doctor | Dr. Nigar Huseynova — gynecologist, Sahil Women's Clinic | `nigar.huseynova@healthtrail.demo` |
 | Lab | Nur Lab | `staff@nurlab.demo` |
 | Lab | Caspian Diagnostics | `staff@caspian.demo` |
 | Lab | Mərkəz Lab | `staff@merkezlab.demo` |

@@ -76,7 +76,7 @@ export function HowItWorks() {
   )
 }
 
-/** Before / after: the problem MediLink solves. */
+/** Before / after: the problem HealthTrail solves. */
 export function Compare() {
   const c = t.landing.compare
   return (

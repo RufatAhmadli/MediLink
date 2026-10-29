@@ -262,7 +262,7 @@ export function QrWidget() {
   return (
     <div className="flex items-center gap-4">
       <div className="rounded-xl bg-white p-2 ring-1 ring-line">
-        <QRCodeSVG value="https://medilink.demo/share/K7P-4QX" size={92} fgColor="#13233A" />
+        <QRCodeSVG value="https://healthtrail.demo/share/K7P-4QX" size={92} fgColor="#13233A" />
       </div>
       <div>
         <div className="font-mono text-xl font-bold tracking-widest">K7P-4QX</div>

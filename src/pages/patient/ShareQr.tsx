@@ -67,7 +67,7 @@ export function ShareQr() {
         <div className="relative">
           <div className={clsx('rounded-2xl bg-white p-3 ring-1 ring-line', (expired || redeemed) && 'opacity-15')}>
             {token ? (
-              <QRCodeSVG value={`https://medilink.demo/share/${token.code}`} size={220} fgColor="#13233A" level="M" />
+              <QRCodeSVG value={`https://healthtrail.demo/share/${token.code}`} size={220} fgColor="#13233A" level="M" />
             ) : (
               <div className="size-[220px] animate-pulse rounded-lg bg-canvas" />
             )}

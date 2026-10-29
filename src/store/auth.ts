@@ -15,7 +15,7 @@ export const useAuth = create<AuthState>()(
       setUser: (user) => set({ user }),
       logout: () => set({ user: null }),
     }),
-    { name: 'medilink-auth', storage: createJSONStorage(() => localStorage) },
+    { name: 'healthtrail-auth', storage: createJSONStorage(() => localStorage) },
   ),
 )
 

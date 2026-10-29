@@ -3,7 +3,7 @@
 
 export const en = {
   app: {
-    name: 'MediLink',
+    name: 'HealthTrail',
     tagline: 'Your medical history, wherever you go.',
     fictional: 'Prototype — all names, results, clinics and labs are fictional.',
     resetDemo: 'Reset demo data',
@@ -27,7 +27,7 @@ export const en = {
 
   landing: {
     headline: 'Your medical history, wherever you go.',
-    intro: 'MediLink connects private clinics and labs in Azerbaijan. Book visits and tests, and let your verified results follow you — only when you say so.',
+    intro: 'HealthTrail connects private clinics and labs in Azerbaijan. Book visits and tests, and let your verified results follow you — only when you say so.',
     getStarted: 'Get started',
     logIn: 'Log in',
     points: [
@@ -41,9 +41,9 @@ export const en = {
     trust: ['Verified by partner labs', 'You control access', 'Free for patients'],
     pointTags: ['Patients', 'Labs → Patients', 'Patients → Doctors'],
     how: {
-      eyebrow: 'How MediLink works',
+      eyebrow: 'How HealthTrail works',
       title: 'One record that travels between clinics and labs',
-      subtitle: 'Today every clinic and lab in Baku keeps its own paper or PDF. MediLink links them so a result is entered once and is there wherever the patient goes next.',
+      subtitle: 'Today every clinic and lab in Baku keeps its own paper or PDF. HealthTrail links them so a result is entered once and is there wherever the patient goes next.',
       steps: [
         { who: 'Patient', title: 'Books a visit or test', text: 'Picks an open slot at a private clinic or partner lab, no phone calls.', chip: 'Booked · Tue 10:30' },
         { who: 'Lab', title: 'Publishes a verified result', text: 'The lab enters values once. They are checked against reference ranges and signed.', chip: 'HbA1c 6.9% · Verified' },
@@ -53,8 +53,8 @@ export const en = {
     },
     compare: {
       title: 'Why it matters',
-      before: 'Without MediLink',
-      after: 'With MediLink',
+      before: 'Without HealthTrail',
+      after: 'With HealthTrail',
       beforeItems: ['Results on paper and in WhatsApp photos', 'Same test repeated at every new clinic', 'Doctor can’t compare labs with different units', 'No idea who looked at your records'],
       afterItems: ['Verified results arrive straight from the lab', 'History follows the patient to any partner clinic', 'Every lab’s values on one comparable chart', 'Access log shows every view, revoke anytime'],
     },
@@ -67,7 +67,7 @@ export const en = {
   },
 
   auth: {
-    logInTitle: 'Log in to MediLink',
+    logInTitle: 'Log in to HealthTrail',
     welcomeBack: 'Welcome back',
     chooseRole: 'I am a…',
     roleHints: {
@@ -108,7 +108,7 @@ export const en = {
     email: 'Email',
     password: 'Password',
     logIn: 'Log in',
-    noAccount: 'New to MediLink?',
+    noAccount: 'New to HealthTrail?',
     createAccount: 'Create a patient account',
     staffNote: 'Accounts for doctors and lab staff are created by your clinic or lab administrator.',
     demoTitle: 'Demo accounts',
@@ -128,12 +128,12 @@ export const en = {
     smsIntro: (phone: string) => `We sent a 6-digit code to ${phone}.`,
     smsHint: 'Demo: any 6 digits work.',
     verify: 'Verify and continue',
-    welcome: (name: string) => `Welcome to MediLink, ${name.split(' ')[0]}`,
+    welcome: (name: string) => `Welcome to HealthTrail, ${name.split(' ')[0]}`,
   },
 
   showcase: {
     eyebrow: 'Feature dashboard',
-    title: 'Everything in MediLink, at a glance',
+    title: 'Everything in HealthTrail, at a glance',
     subtitle: 'A live look at the main features for patients, doctors and labs. Click “Try it” to open any of them with a demo account.',
     all: 'All features',
     tryAs: (name: string) => `Try it as ${name}`,
@@ -156,7 +156,7 @@ export const en = {
 
   tour: {
     eyebrow: 'Feature tour',
-    title: 'See how MediLink works',
+    title: 'See how HealthTrail works',
     subtitle: 'Pick a role, then a feature. Every screen here is part of the prototype — press “Try it” to open it live.',
     pageTitle: 'All features',
     seeAll: 'See all features',
@@ -169,84 +169,84 @@ export const en = {
         title: 'Book a private doctor in seconds',
         lead: 'Search by specialty, clinic or area of Baku and pick an open time — no phone calls.',
         points: ['Instant booking confirms right away', 'Request visits are approved by the doctor', 'Share records with the doctor at the last step'],
-        url: 'medilink.az/patient/book',
+        url: 'healthtrail.az/patient/book',
       },
       timeline: {
         tab: 'Timeline',
         title: 'One timeline across every lab',
         lead: 'The same test from different labs lines up on one chart, normalised to one standard.',
         points: ['Each point is labelled with its lab', 'Normal range shaded behind the line', 'High and Low written in words, not only colours'],
-        url: 'medilink.az/patient/timeline',
+        url: 'healthtrail.az/patient/timeline',
       },
       results: {
         tab: 'Verified results',
         title: 'Results straight from the lab',
         lead: 'Partner labs send results directly. Patients can’t upload or edit them, so doctors can trust them.',
         points: ['“Verified · from Lab” on every result', 'Shows the ordering doctor', 'Out-of-range values highlighted'],
-        url: 'medilink.az/patient/results',
+        url: 'healthtrail.az/patient/results',
       },
       consent: {
         tab: 'Consent & QR',
         title: 'The patient decides who sees what',
         lead: 'Grant access for one visit, 30 days or until revoked — and see every time a doctor opens the record.',
         points: ['Share at booking, by QR at reception, or approve a request', 'Revoke instantly', 'Access log: who, what, when'],
-        url: 'medilink.az/patient/access',
+        url: 'healthtrail.az/patient/access',
       },
       followUp: {
         tab: 'Follow-ups & orders',
         title: 'Follow-ups and lab orders in one place',
         lead: 'Doctors send follow-up requests and lab orders; the patient books them with one tap.',
         points: ['“Dr. X asks you to book a follow-up”', 'Book ordered tests at any partner lab', 'Status: To book → Booked → Result ready'],
-        url: 'medilink.az/patient',
+        url: 'healthtrail.az/patient',
       },
       schedule: {
         tab: 'Schedule',
         title: 'A calm day view for doctors',
         lead: 'Confirmed visits, requests waiting for approval and new results — at a glance.',
         points: ['Day and week calendar', 'Approve, decline or propose another time', 'Instant or Request per visit type'],
-        url: 'medilink.az/doctor/schedule',
+        url: 'healthtrail.az/doctor/schedule',
       },
       record: {
         tab: 'Patient record',
         title: 'The full picture before the patient arrives',
         lead: 'With consent, the doctor sees verified results from every lab and previous doctors’ summaries.',
         points: ['Access scope and expiry in the header', 'Locked until the patient shares', 'Write summary, order tests, send follow-up'],
-        url: 'medilink.az/doctor/patients/elshad',
+        url: 'healthtrail.az/doctor/patients/elshad',
       },
       inbox: {
         tab: 'Results inbox',
         title: 'Ordered results arrive by themselves',
         lead: 'When the lab publishes, the result is linked to the order and lands in the doctor’s inbox.',
         points: ['“Results ready for …” notification', 'New badge until opened', 'Out-of-range flagged'],
-        url: 'medilink.az/doctor/inbox',
+        url: 'healthtrail.az/doctor/inbox',
       },
       feedback: {
         tab: 'Private feedback',
         title: 'Honest feedback, kept private',
         lead: 'After a visit the patient rates it. Only the doctor and the clinic see it — it is never published.',
         points: ['1–5 rating with optional comment', 'Average and distribution', 'No public reviews'],
-        url: 'medilink.az/doctor/feedback',
+        url: 'healthtrail.az/doctor/feedback',
       },
       orders: {
         tab: 'Incoming orders',
         title: 'Doctor orders, ready at the lab',
         lead: 'The lab sees which doctor ordered which tests, and why — before the patient walks in.',
         points: ['Doctor name and clinical note', 'Self-booked and ordered visits together', 'Open to any partner lab'],
-        url: 'medilink.az/lab/orders',
+        url: 'healthtrail.az/lab/orders',
       },
       publish: {
         tab: 'Publish results',
         title: 'Publish once, delivered everywhere',
         lead: 'Lab staff type the values; units, ranges and High/Low flags fill in from the catalog.',
-        points: ['Try typing a value', 'Delivered to the patient and ordering doctor', 'Status: Delivered to MediLink'],
-        url: 'medilink.az/lab/publish',
+        points: ['Try typing a value', 'Delivered to the patient and ordering doctor', 'Status: Delivered to HealthTrail'],
+        url: 'healthtrail.az/lab/publish',
       },
       mapping: {
         tab: 'Format mapping',
         title: 'Every lab speaks one language',
-        lead: 'Each lab keeps its own test names; MediLink maps them to standard LOINC codes.',
+        lead: 'Each lab keeps its own test names; HealthTrail maps them to standard LOINC codes.',
         points: ['“Qan şəkəri”, “GLU” → Glucose', 'Same test, one chart', 'Ready for FHIR'],
-        url: 'medilink.az/lab/mapping',
+        url: 'healthtrail.az/lab/mapping',
       },
     },
   },
@@ -331,7 +331,7 @@ export const en = {
     anyDate: 'Any date',
     partnerOnly: 'Partner clinics only',
     partnerLabsOnly: 'Partner labs only',
-    partner: 'MediLink partner',
+    partner: 'HealthTrail partner',
     fromPrice: (p: number) => `from ${p} AZN`,
     noResults: 'Nothing matches your search.',
     yearsExperience: (n: number) => `${n} years of experience`,
@@ -366,7 +366,7 @@ export const en = {
     forOrder: (doctor: string) => `For the order from ${doctor}`,
     openingHours: 'Opening hours',
     total: 'Total',
-    labBookedText: 'Come in at your time. The result will appear in MediLink automatically.',
+    labBookedText: 'Come in at your time. The result will appear in HealthTrail automatically.',
 
     appointments: 'My appointments',
     upcoming: 'Upcoming',
@@ -438,7 +438,7 @@ export const en = {
 
     profile: 'Profile',
     personal: 'Personal details',
-    patientId: 'MediLink ID',
+    patientId: 'HealthTrail ID',
     area: 'Area',
     privacy: 'All data in this prototype is fictional.',
 
@@ -475,7 +475,7 @@ export const en = {
     withdraw: 'Withdraw',
 
     patients: 'Patients',
-    searchPatients: 'Search by name or MediLink ID',
+    searchPatients: 'Search by name or HealthTrail ID',
     accessGranted: 'Access granted',
     noAccess: 'No access',
     requested: 'Requested',
@@ -576,7 +576,7 @@ export const en = {
     chooseBooking: 'Choose a booking',
     nothingToPublish: 'No bookings waiting for results.',
     publishButton: 'Publish',
-    publishedMsg: 'Result delivered to MediLink',
+    publishedMsg: 'Result delivered to HealthTrail',
     standard: 'Standard test',
     localName: 'Your name',
     unit: 'Unit',
@@ -584,7 +584,7 @@ export const en = {
     value: 'Value',
 
     sent: 'Results sent',
-    deliveredTo: 'Delivered to MediLink',
+    deliveredTo: 'Delivered to HealthTrail',
     receivedBy: 'Received by',
 
     mapping: 'Format mapping',

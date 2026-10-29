@@ -14,7 +14,7 @@ const fresh = (version: number): DbState => ({ ...createSeed(), version })
 
 export const useDb = create<DbState>()(
   persist(() => fresh(0), {
-    name: 'medilink-demo-db',
+    name: 'healthtrail-demo-db',
     version: 1,
     storage: createJSONStorage(() => localStorage),
   }),

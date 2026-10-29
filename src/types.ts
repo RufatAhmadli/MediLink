@@ -22,7 +22,7 @@ export interface Patient {
   sex: Sex
   phone: string
   email: string
-  /** MediLink patient identifier (invented). */
+  /** HealthTrail patient identifier (invented). */
   identifier: string
   area: string
 }
